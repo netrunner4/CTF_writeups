@@ -57,7 +57,7 @@ function to_bits(world, x, mode)
 ```
 
 Here are the blocks changed by `to_bits` function. In every two block pair left is changed in mode 0 and right is changed in mode 1
-![Image with redstone and wool blocks from a circuit](/images/circuit_redstone.png)
+![Image with redstone and wool blocks from a circuit](/2022/X-MAS/images/circuit_redstone.png)
 
 Next function is `from_bits`. It reads 4 groups of 7 redstone lamps and converts them into letters using dictionary. Then the letters are added to **encflag**
 ```javascript
@@ -98,7 +98,7 @@ function from_bits(world)
 }
 ```
 This is one block of lamps (1110110) which is letter G. Other combinations are 0010010-A, 1100111-C, 1111011-T
-![Image with one block of redstone lamps from a circuit](/images/circuit_lamps.png)
+![Image with one block of redstone lamps from a circuit](/2022/X-MAS/images/circuit_lamps.png)
 
 After some tests we can find that each letter takes two input signals and each signal consists of pair of redstone/wool block with and without offset. 00 signal results in T, 01 in C, 10 in A and 11 in G. Two last letters are mirrored so they have 01 for A and 10 for C
 
@@ -155,10 +155,10 @@ So we have encoded letters and **rkey**. Having them we can find **x** by gettin
 Let's get the first letter. First 4 encoded letters are GACG. It is 11 10 10(mirrored) 11 in signals. **rkey** is 143 so blocks with offset are 10001111
 
 With **x**=0 we get signals 11 11 00 01
-![Image with redstone and wool blocks from a circuit where rkey set to 143](/images/circuit_redstone_143.png)
+![Image with redstone and wool blocks from a circuit where rkey set to 143](/2022/X-MAS/images/circuit_redstone_143.png)
 
 So we need to change fourth, fifth and seventh block
-![Image with redstone and wool blocks from a circuit where rkey set to 143 and x set to 88](/images/circuit_redstone_143_88.png)
+![Image with redstone and wool blocks from a circuit where rkey set to 143 and x set to 88](/2022/X-MAS/images/circuit_redstone_143_88.png)
 
 Now we can find out **x** from changed blocks: 64+16+8=88 what is letter X. And then we can add this number to old **rkey** to get a new one - 143+88=231 (also new rkey is written to logs of NPC with every letter encoded)
 

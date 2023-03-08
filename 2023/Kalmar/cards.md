@@ -3,8 +3,7 @@
 ### Description
 > Follow the shuffle.
 
-We have pcap file with FTP packets, opened it with wireshark
-If we follow TCP stream we can find around 80 similar FTP connections
+We have pcap file with FTP packets, opened it with wireshark. If we follow TCP stream we can find around 80 similar FTP connections
 
 Example:
 ```
@@ -27,10 +26,10 @@ RETR flagpart.txt
 QUIT
 221 Goodbye.
 ```
-Here we can see that user conncets to server, chooses directory (342) and recieves one byte of data which is part of the flag
-So now we can use `data` filter in wireshark to see all flag's parts, but they sent in random order
+Here we can see that user conncets to server, chooses directory (342) and recieves one byte of data which is part of the flag. So now we can use `data` filter in wireshark to see all flag's parts, but they sent in random order
 
 To find out which letter is connected to which directory we can use this filter (N is number of stream):
+
 `data or (frame contains "CWD" or frame contains "BINARY") and tcp.stream eq N`
 
 And this way we can connect each directory to its letter - first data packet sent after packet containing BINARY has part of flag corresponding to directory number in chosen stream. Do this to all streams and get flag

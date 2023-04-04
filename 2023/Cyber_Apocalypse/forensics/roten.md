@@ -9,7 +9,7 @@ In it we can see that attacker does bruteforce search /{dirname}/galacticmap.php
 
 Before that on packet 1929 we can find that attacker uploaded php file upload. We can extract it from there (map-update.php)
 
-It looks like obfuscated php code with `eval` in the end. We can change `eval` to `echo` to see deobfuscated code(deobfuscated.php)
+It looks like obfuscated php code with `eval` in the end. We can change `eval` to `echo` to see deobfuscated code (deobfuscated.php)
 
 And flag is in the comment
 

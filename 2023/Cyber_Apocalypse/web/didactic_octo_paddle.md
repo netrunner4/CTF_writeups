@@ -8,21 +8,27 @@ After opening website we can see login page and we can find register page.
 ![didactic_octo_paddle2](/2023/Cyber_Apocalypse/web/images/didactic_octo_paddle2.png)
 
 By trying to register as admin we understand that user exists
+
 ![didactic_octo_paddle3](/2023/Cyber_Apocalypse/web/images/didactic_octo_paddle3.png)
 
 Logging in gives us access to items list, with nothing interesting and JWT token. It uses HS256 and contains id
+
 ![didactic_octo_paddle4](/2023/Cyber_Apocalypse/web/images/didactic_octo_paddle4.png)
 
 We can look up how it works in source code
+
 ![didactic_octo_paddle5](/2023/Cyber_Apocalypse/web/images/didactic_octo_paddle5.png)
 
 It checks for “none” algorithm but only in lowercase. It can be abused
 
 jwt_tool confirms it (with id set to 1)
+
 ![didactic_octo_paddle6](/2023/Cyber_Apocalypse/web/images/didactic_octo_paddle6.png)
+
 *1148 byte response is redirect to login page*
 
 On admin page we have list of active users
+
 ![didactic_octo_paddle7](/2023/Cyber_Apocalypse/web/images/didactic_octo_paddle7.png)
 
 It is implemented by this string:

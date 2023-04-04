@@ -4,6 +4,7 @@
 > In order to decipher the alien communication that held the key to their location, she needed access to a decoder with advanced capabilities - a decoder that only The Orbital firm possessed. Can you get your hands on the decoder?
 
 We have access to a web page, on it we can see login form
+
 ![orbital1](/2023/Cyber_Apocalypse/web/images/orbital1.png)
 
 Also we can see that login form send works through API:

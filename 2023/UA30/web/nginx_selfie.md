@@ -5,7 +5,7 @@
 
 Used gobuster as usual, found **/uploads** page
 
-![image1]
+![nginx_selfie1](/2023/UA30/web/images/nginx_selfie1.png)
 
 After playing with link I found out that **/upload../** gives us access to root directory
 

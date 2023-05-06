@@ -5,7 +5,7 @@
 
 On the page we can see functionality that lets us send requests to any url (SSRF)
 
-[!image1]
+![troubleshooting1](/2023/UA30/web/images/troubleshooting1.png)
 
 I initially tried to do a request to myself (vpn was used to connect to ctf's network) but with no succes
 

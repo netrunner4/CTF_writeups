@@ -7,13 +7,13 @@ On main page we see 2048 game without anything interesting
 
 With gobuster we can find **/admin** page with password recovery functionality
 
-[!image1]
+![hi_jack1](/2023/UA30/web/images/hi_jack1.png)
 
 Looks like we need to find/guess mail
 
 After some tries email `admin@ua30ctf.com` gave us link to recovery page
 
-[!image2]
+![hi_jack2](/2023/UA30/web/images/hi_jack2.png)
 
 But it had number covered with six **x** letters, so it's obvious that this is 6 number token
 
